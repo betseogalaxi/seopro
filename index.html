@@ -184,6 +184,116 @@
       <div style="position:relative;">
         <img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/ai/ellipse-120.png" alt="" style="position:absolute;right:8%;top:-90px;opacity:.9;transform:translateZ(0);width:260px;">
       </div>
+      
+<section class="testimonials">
+  <style>
+    :root {
+      --orange: #ff7a00;
+    }
+    .testimonials {
+      background-color: #0e0e0e;
+      padding: 60px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .testimonials h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .marquee-wrapper {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee {
+      display: flex;
+      gap: 20px;
+      transform: translateX(0);
+      animation: scroll 45s linear infinite;
+      animation-play-state: paused; /* Start paused */
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonial-item {
+      background: #1a1a1a;
+      border: 1px solid #222;
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      flex-shrink: 0;
+      text-align: center;
+      transition: 0.3s;
+      color: #fff;
+    }
+    .testimonial-item:hover {
+      box-shadow: 0 0 10px rgba(255,122,0,0.5);
+      transform: translateY(-5px);
+    }
+    .testimonial-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--orange);
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <div class="container">
+    <h2>Müşteri Yorumları</h2>
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <!-- 20 testimonials -->
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=1" class="testimonial-img"><p>“Sitem 2 ayda 1. sayfaya çıktı!”</p><strong>Ahmet K.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=2" class="testimonial-img"><p>“Backlink kalitesi inanılmaz.”</p><strong>Melis D.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=3" class="testimonial-img"><p>“Casino markamız artık global.”</p><strong>Yunus B.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=4" class="testimonial-img"><p>“Gerçek profesyoneller.”</p><strong>Selin A.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=5" class="testimonial-img"><p>“ROI %200 arttı.”</p><strong>Baran T.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=6" class="testimonial-img"><p>“Tam bir SEO ustası.”</p><strong>Okan Y.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=7" class="testimonial-img"><p>“Harika destek ekibi.”</p><strong>Esra K.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=8" class="testimonial-img"><p>“Trafiğim 3 katına çıktı.”</p><strong>Can E.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=9" class="testimonial-img"><p>“Gerçek sonuç odaklı ajans.”</p><strong>Burcu L.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=10" class="testimonial-img"><p>“Her kuruşuna değer.”</p><strong>Emir S.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=11" class="testimonial-img"><p>“Site trafiğim patladı.”</p><strong>Kerem D.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=12" class="testimonial-img"><p>“Dönüşüm oranım ikiye katlandı.”</p><strong>Gizem P.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=13" class="testimonial-img"><p>“Her adımda destek sağladılar.”</p><strong>Serkan F.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=14" class="testimonial-img"><p>“Sektörde fark yarattık.”</p><strong>Melih T.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=15" class="testimonial-img"><p>“Gerçek profesyonel hizmet.”</p><strong>Elif Z.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=16" class="testimonial-img"><p>“Google sıralamam zirvede.”</p><strong>Onur C.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=17" class="testimonial-img"><p>“SEO mucizesi yaşadım.”</p><strong>Pelin R.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=18" class="testimonial-img"><p>“Hızlı sonuçlar harika!”</p><strong>Furkan S.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=19" class="testimonial-img"><p>“Bütçem boşa gitmedi.”</p><strong>Ceren U.</strong></div>
+        <div class="testimonial-item"><img src="https://i.pravatar.cc/60?img=20" class="testimonial-img"><p>“Kesinlikle tavsiye ederim.”</p><strong>Ali V.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const marquee = document.querySelector('.marquee');
+    const marqueeWrapper = document.querySelector('.marquee-wrapper');
+
+    // Duplicate testimonials to make smooth loop
+    marquee.innerHTML += marquee.innerHTML;
+
+    // Show first 5 testimonials statically (no animation)
+    marquee.style.animationPlayState = 'paused';
+
+    // Start scrolling after 5 seconds
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        marquee.style.animationPlayState = 'running';
+      }, 5000);
+    });
+
+    // Pause scroll when hovered
+    marqueeWrapper.addEventListener('mouseenter', () => marquee.style.animationPlayState = 'paused');
+    marqueeWrapper.addEventListener('mouseleave', () => marquee.style.animationPlayState = 'running');
+  </script>
+</section>
+
 
       <div class="container">
         <div class="wptb-heading style-ai">
@@ -252,116 +362,291 @@
         </div>
       </div>
     </section>
-    <!-- SERVICES -->
-    <section id="services" class="wptb-ai-features" style="padding:36px 0;">
-      <div class="container">
-        <div class="wptb-heading style-ai text-center" data-aos="fade-up">
-          <div class="wptb-heading--subtitle">Hizmetler</div>
-          <h2 class="wptb-heading--title">Hizmetlerimize Göz Atın</h2>
-        </div>
+   <!-- SERVICES -->
+<section id="services" style="padding:60px 0; background:#0e0e0e;">
+  <style>
+    :root { --orange:#ff7a00; }
 
-        <div class="row mt-4">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta5.svg" alt=""></div>
-              <div class="wptb-item--holder">
-                <h4>Kurumsal SEO</h4>
-                <div class="wptb-item--desc">Kurumsal anahtar kelimeleriniz için otorite sağlıyor ve bunu düzenli olarak koruyoruz.</div>
-              </div>
-            </div>
-          </div>
+    #services .section-subtitle {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    #services .section-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
 
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta7.svg" alt=""></div>
-              <div class="wptb-item--holder">
-                <h4>Affiliate SEO</h4>
-                <div class="wptb-item--desc">Rakiplerinizi analiz ediyor ve rakip sitelerden trafik çekmenizi sağlıyoruz.</div>
-              </div>
-            </div>
-          </div>
+    #services .service-box {
+      background:#1a1a1a;
+      border:1px solid #222;
+      border-radius:15px;
+      padding:30px 20px;
+      text-align:center;
+      color:#fff;
+      transition:all 0.3s ease;
+      height:100%;
+    }
+    #services .service-box:hover {
+      box-shadow:0 0 15px rgba(255,122,0,0.5);
+      transform:translateY(-6px);
+    }
 
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="130">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta2.svg" alt=""></div>
-              <div class="wptb-item--holder">
-                <h4>Sosyal Medya Pazarlaması</h4>
-                <div class="wptb-item--desc">Sosyal medya pazarlamanızı yönetiyor ve size hedefli trafik sağlıyoruz.</div>
-              </div>
-            </div>
-          </div>
+    #services .service-icon {
+      font-size:2rem;
+      margin-bottom:15px;
+    }
 
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="170">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta3.svg" alt=""></div>
-              <div class="wptb-item--holder">
-                <h4>E-posta Pazarlama</h4>
-                <div class="wptb-item--desc">Spam korumalı, yüksek teslimat oranlı toplu e-posta sistemleri sağlıyoruz.</div>
-              </div>
-            </div>
-          </div>
+    #services .service-title {
+      font-size:1.1rem;
+      font-weight:600;
+      margin-bottom:10px;
+      color:#fff;
+    }
 
-          <!-- second row of service icons -->
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="210">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta8.svg" alt=""></div>
-              <h4>Bet Backlink</h4>
-              <div class="wptb-item--desc">Bahis sektörüne uygun, özel hazırlanmış backlink kaynakları sunuyoruz.</div>
-            </div>
-          </div>
+    #services .service-desc {
+      font-size:0.95rem;
+      color:#ccc;
+      line-height:1.6;
+    }
+  </style>
 
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta10-2.svg" alt=""></div>
-              <h4>PBN Network</h4>
-              <div class="wptb-item--desc">Kendi kalıcı backlink yapınızı kurmanız için yüksek otoriteli bloglar sağlıyoruz.</div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="text-center">
+      <div class="section-subtitle">Hizmetler</div>
+      <h2 class="section-title">Hizmetlerimize Göz Atın</h2>
+    </div>
 
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="290">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta12-2.svg" alt=""></div>
-              <h4>Hesap Kapatma</h4>
-              <div class="wptb-item--desc">Twitter (X), Google Grupları, Tumblr vb. platformlarda spam hesapların kapatılmasını sağlıyoruz.</div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="330">
-            <div class="wptb-fancy-box1">
-              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta1.svg" alt=""></div>
-              <h4>Otomatik SEO Paneli</h4>
-              <div class="wptb-item--desc">Talep üzerine yapay zekâ destekli otomatik SEO paneli sağlayabiliyoruz.</div>
-            </div>
-          </div>
-
+    <div class="row mt-4 gy-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🏢</div>
+          <h4 class="service-title">Kurumsal SEO</h4>
+          <p class="service-desc">Kurumsal anahtar kelimeleriniz için otorite sağlıyor ve bunu düzenli olarak koruyoruz.</p>
         </div>
       </div>
 
-      <!-- counters -->
-      <div class="wptb-counter2 style-ai pd-top-100" style="padding-top:48px;">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-sm-6 col-lg-3" data-aos="fade-up">
-              <div class="wptb-counter--value"><span class="odometer" data-count="10">10</span><span class="suffix">B</span></div>
-              <div class="wptb-counter--text">Bahis</div>
-            </div>
-            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-              <div class="wptb-counter--value"><span class="odometer" data-count="56">56</span><span class="suffix">S</span></div>
-              <div class="wptb-counter--text">Arama</div>
-            </div>
-            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
-              <div class="wptb-counter--value"><span class="odometer" data-count="20">20</span><span class="suffix">E</span></div>
-              <div class="wptb-counter--text">Motoru</div>
-            </div>
-            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-              <div class="wptb-counter--value"><span class="odometer" data-count="100">100</span><span class="suffix">O</span></div>
-              <div class="wptb-counter--text">Optimizasyon</div>
-            </div>
-          </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🤝</div>
+          <h4 class="service-title">Affiliate SEO</h4>
+          <p class="service-desc">Rakiplerinizi analiz ediyor ve rakip sitelerden trafik çekmenizi sağlıyoruz.</p>
         </div>
       </div>
 
-    </section>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">📱</div>
+          <h4 class="service-title">Sosyal Medya Pazarlaması</h4>
+          <p class="service-desc">Sosyal medya pazarlamanızı yönetiyor ve size hedefli trafik sağlıyoruz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">✉️</div>
+          <h4 class="service-title">E-posta Pazarlama</h4>
+          <p class="service-desc">Spam korumalı, yüksek teslimat oranlı toplu e-posta sistemleri sağlıyoruz.</p>
+        </div>
+      </div>
+
+      <!-- Second row -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🔗</div>
+          <h4 class="service-title">Bet Backlink</h4>
+          <p class="service-desc">Bahis sektörüne uygun, özel hazırlanmış backlink kaynakları sunuyoruz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🌐</div>
+          <h4 class="service-title">PBN Network</h4>
+          <p class="service-desc">Kendi kalıcı backlink yapınızı kurmanız için yüksek otoriteli bloglar sağlıyoruz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🚫</div>
+          <h4 class="service-title">Hesap Kapatma</h4>
+          <p class="service-desc">Twitter (X), Google Grupları, Tumblr vb. platformlarda spam hesapların kapatılmasını sağlıyoruz.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box">
+          <div class="service-icon">🤖</div>
+          <h4 class="service-title">Otomatik SEO Paneli</h4>
+          <p class="service-desc">Talep üzerine yapay zekâ destekli otomatik SEO paneli sağlayabiliyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FİYATLAR / PAKETLER -->
+<section id="pricing" style="padding:60px 0; background:#0b0b0b;">
+  <style>
+    :root { --orange:#ff7a00; }
+
+    #pricing .section-subtitle {
+      color: var(--orange);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    #pricing .section-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    #pricing .price-box {
+      background:#1a1a1a;
+      border:1px solid #222;
+      border-radius:15px;
+      padding:40px 25px;
+      color:#fff;
+      text-align:center;
+      transition:all 0.3s ease;
+      height:100%;
+    }
+    #pricing .price-box:hover {
+      box-shadow:0 0 15px rgba(255,122,0,0.5);
+      transform:translateY(-6px);
+    }
+
+    #pricing .price-title {
+      font-size:1.3rem;
+      font-weight:600;
+      margin-bottom:10px;
+      color:#fff;
+    }
+
+    #pricing .price-desc {
+      color:#ccc;
+      font-size:0.95rem;
+      margin-bottom:25px;
+      line-height:1.6;
+    }
+
+    #pricing .price {
+      font-size:2rem;
+      font-weight:700;
+      color:var(--orange);
+      margin-bottom:15px;
+    }
+
+    #pricing ul {
+      list-style:none;
+      padding:0;
+      margin-bottom:25px;
+      text-align:left;
+    }
+
+    #pricing ul li {
+      padding:6px 0;
+      border-bottom:1px solid #222;
+      font-size:0.95rem;
+    }
+
+    #pricing .btn-orange {
+      background-color:var(--orange);
+      color:#fff;
+      border:none;
+      padding:10px 20px;
+      border-radius:8px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    #pricing .btn-orange:hover {
+      background-color:#ff9933;
+      transform:scale(1.05);
+    }
+  </style>
+
+  <div class="container text-center">
+    <div class="section-subtitle">Fiyatlar</div>
+    <h2 class="section-title">Paketlerimizi İnceleyin</h2>
+
+    <div class="row gy-4">
+      <!-- Paket 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="price-box">
+          <h4 class="price-title">Başlangıç Paketi</h4>
+          <p class="price-desc">Yeni açılan siteler için SEO temelleri, analiz ve temel optimizasyonlar.</p>
+          <div class="price">$4,900</div>
+          <ul>
+            <li>✅ Temel SEO Analizi</li>
+            <li>✅ 10 Anahtar Kelime</li>
+            <li>✅ Site İçi Optimizasyon</li>
+            <li>✅ 5 Backlink Kaynağı</li>
+          </ul>
+          <a href="#contact" class="btn-orange">Teklif Al</a>
+        </div>
+      </div>
+
+      <!-- Paket 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="price-box">
+          <h4 class="price-title">Profesyonel Paket</h4>
+          <p class="price-desc">Orta ölçekli bahis markalar için güçlü SEO & yurtiçi backlink stratejileri.</p>
+          <div class="price">$9,900</div>
+          <ul>
+            <li>✅ Derin SEO Denetimi</li>
+            <li>✅ 25 Anahtar Kelime</li>
+            <li>✅ 15 Backlink</li>
+            <li>✅ Haftalık Raporlama</li>
+          </ul>
+          <a href="#contact" class="btn-orange">Teklif Al</a>
+        </div>
+      </div>
+
+      <!-- Paket 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="price-box">
+          <h4 class="price-title">Premium Paket</h4>
+          <p class="price-desc">Rekabetçi siteler için özel SEO planı, premium kaynaklar ve içerik desteği.</p>
+          <div class="price">$14,900</div>
+          <ul>
+            <li>✅ 50 Anahtar Kelime</li>
+            <li>✅ 30 Premium Backlink</li>
+            <li>✅ İçerik Stratejisi</li>
+            <li>✅ Teknik SEO Denetimi</li>
+          </ul>
+          <a href="#contact" class="btn-orange">Teklif Al</a>
+        </div>
+      </div>
+
+      <!-- Paket 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="price-box">
+          <h4 class="price-title">Kurumsal Paket</h4>
+          <p class="price-desc">Büyük bahis markaları için tam SEO, içerik, backlink ve pazarlama yönetimi.</p>
+          <div class="price">$19,900</div>
+          <ul>
+            <li>✅ 100+ Anahtar Kelime</li>
+            <li>✅ 50+ Backlink Kaynağı</li>
+            <li>✅ Marka Görünürlüğü Yönetimi</li>
+            <li>✅ 7/24 Destek</li>
+          </ul>
+          <a href="#contact" class="btn-orange">Teklif Al</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="wptb-ai-faq" style="background-image:url('https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/3.jpg');">
