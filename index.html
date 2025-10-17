@@ -1,523 +1,556 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
-<title>BetSEO: Bahis Sektörüne Özel Pazarlama Çözümleri</title>
-<meta name="description" content="BetSEO, bahis sektörü için özel SEO ve dijital pazarlama çözümleri sunan kreatif bir pazarlama ajansıdır. Markanızı görünür kılmak ve büyütmek için çalışıyoruz.">
-<link rel="shortcut icon" href="https://betseo.net/theme/default/assets/img/icon.png">
-<link rel="apple-touch-icon" href="https://betseo.net/theme/default/assets/img/icon.png">
-<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-<base href="https://betseo.pages.dev/">
-<meta name="copyright" content="betseo.pages.dev">
-<meta name="author" content="betseo.pages.dev">
-<meta name="publisher" content="betseo.pages.dev">
-<meta name="OWNER" content="betseo.pages.dev">
-<meta name="content-language" content="tr">
-<meta name="language" content="Turkish">
-<link rel="alternate" hreflang="x-default" href="https://betseo.pages.dev/"/>
-<link rel="stylesheet" type="text/css" media="all" href="https://betseo.net/system-static/plugin/swiper/css/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="https://betseo.net/theme/default/assets/css/main.css">
-    </head>
-    <body class="theme-style-ai">
-    <header class="header style8 py-4 py-lg-0">
-        <div class="container">
-            <div class="header_inner d-flex align-items-center justify-content-between">
-                <div class="logo flex-shrink-0">
-                    <a href="https://betseo.pages.dev/" class="logo-default" title="BetSEO">
-                        <img src="https://betseo.net/theme/default/assets/img/logo.png" alt="BetSEO">
-                    </a>
-                </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
+  <title>BetSEO: Bahis Sektörüne Özel Pazarlama Çözümleri</title>
+  <meta name="description" content="BetSEO, bahis sektörü için özel SEO ve dijital pazarlama çözümleri sunan kreatif bir pazarlama ajansıdır.">
 
+  <!-- favicon (from your GitHub raw) -->
+  <link rel="icon" href="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/icon.png">
 
-                <div class="header_right_part d-flex align-items-center justify-content-between gap-lg-5">
-                    <div class="mainnav d-none d-lg-block">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="https://betseo.pages.dev/" title="anasayfa"><span>Anasayfa</span></a></li>
-                            <li class="menu-item"><a href="#services" title="Hizmetler"><span>Hizmetler</span></a></li>
-                            <li class="menu-item"><a href="#features" title="Özellikler"><span>Özellikler</span></a></li>
-                            <li class="menu-item"><a href="#about" title="Hakkımızda"><span>Hakkımızda</span></a></li>
-                            <li class="menu-item"><div class="bseo-translate" style="all: unset;"></div></li>
-                        </ul>
-                    </div>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-                    <div class="btn-part d-flex align-items-center gap-4">
-                        <div class="btn-group d-none d-lg-block">
-                            <a href="#contact" class="btn">İletişim <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></a>
-                        </div>
+  <!-- Bootstrap CSS (cdn) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-                        <!-- Mobile Responsive Menu Toggle Button -->
-                        <button type="button" class="mr-menu_toggle d-lg-none">
-                            <i class="bi bi-list"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+  <!-- Swiper CSS (for sliders) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+  <!-- AOS for simple reveal animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css"/>
+
+  <!-- Minimal site CSS (custom) -->
+  <style>
+    :root{
+      --accent:#ff7a00; /* orange */
+      --accent-dark:#e66a00;
+      --bg-dark:#0d0d0f;
+      --text:#f4f4f4;
+      --muted:#cfcfcf;
+      --container-max:1200px;
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;margin:0;background:#080808;color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--container-max);margin:0 auto;padding-left:20px;padding-right:20px}
+
+    /* Header */
+    .header{
+      position:sticky;top:0;z-index:999;
+      background:linear-gradient(180deg, rgba(7,7,7,.7), rgba(10,10,10,.6));
+      backdrop-filter: blur(6px);
+      transition:all .25s ease;
+    }
+    .header.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.6);}
+
+    .header_inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo img{height:48px; display:block}
+
+    /* Main menu */
+    .main-menu{display:flex;gap:22px;list-style:none;padding:0;margin:0;align-items:center}
+    .main-menu a{color:var(--muted);font-weight:600}
+    .main-menu a:hover{color:var(--text)}
+
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border:none}
+    .btn.bg-white{background:#fff;color:#222}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,122,0,.12)}
+
+    /* Hero */
+    .wptb-slider{padding:110px 0;background-size:cover;background-position:center;position:relative;overflow:hidden}
+    .wptb-slider .wptb-slider--content h6{color:var(--accent);font-weight:700;letter-spacing:.8px;margin-bottom:8px}
+    .wptb-slider .wptb-slider--content h1{font-size:44px;line-height:1.05;margin:0 0 12px;color:#fff}
+    .wptb-slider .wptb-slider--content p{color:var(--muted);max-width:620px}
+
+    /* About/Text sections */
+    .wptb-heading--title{color:#fff;font-size:34px;margin:8px 0 16px}
+    .wptb-heading--subtitle{color:var(--accent);font-weight:700;margin-bottom:12px}
+
+    /* Feature tabs area */
+    .wptb-ai-tab-content{padding:48px;border-radius:14px;background-size:cover;background-position:center;margin-top:24px}
+    .nav-vertical{list-style:none;padding:0;margin:0;min-width:200px}
+    .nav-vertical .nav-link{display:block;padding:12px 16px;margin-bottom:8px;border-radius:10px;background:rgba(0,0,0,0.25);color:var(--text)}
+    .nav-vertical .nav-link.active{background:linear-gradient(90deg,var(--accent),var(--accent-dark));color:#fff}
+
+    /* Services grid */
+    .wptb-fancy-box1{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-bottom:18px}
+    .wptb-fancy-icon img{height:42px}
+
+    /* Counters */
+    .wptb-counter--value{font-size:28px;font-weight:800;color:var(--accent)}
+    .wptb-counter--text{color:var(--muted)}
+
+    /* Contact section */
+    .wptb-ai-faq{padding:72px 0;background-size:cover;background-position:center;color:var(--text);position:relative}
+    .wptb-ai-faq .background-overlay{position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.65));z-index:0;border-radius:0}
+    .wptb-ai-faq .container>*{position:relative;z-index:2}
+
+    /* Footer */
+    .footer{padding:48px 0 8px;background:#070707;color:var(--muted)}
+    .logo-footer img{height:44px}
+
+    /* small */
+    @media (max-width:991px){
+      .main-menu{display:none}
+      .mr-menu_toggle{display:inline-block}
+    }
+
+    /* small tweak for transparent form controls */
+    .form-control.bg-transparent{background:transparent;border:1px solid rgba(255,255,255,.08);color:var(--text);border-radius:8px;padding:12px}
+
+    /* to-top icon */
+    .totop{position:fixed;right:22px;bottom:22px;background:var(--accent);width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+    .totop a{color:#fff;font-weight:700}
+  </style>
+
+  <!-- base href (keep as you had) -->
+  <base href="https://betseo.pages.dev/">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header_inner">
+        <div class="logo">
+          <a href="/" class="logo-default" title="BetSEO">
+            <img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/logo.png" alt="BetSEO">
+          </a>
         </div>
-    </header>
 
-    <div class="mr-menu">
-        <div class="mr-menu_overlay"></div>
-        <button type="button" class="mr-menu_close"><i class="bi bi-x-lg"></i></button>
-        <div class="logo"></div> <!-- Keep this div empty. Logo will come here by JavaScript -->
-        <div class="mr_navmenu"></div> <!-- Keep this div empty. Menu will come here by JavaScript -->
+        <div class="header_right_part d-flex align-items-center gap-3">
+          <nav>
+            <ul class="main-menu">
+              <li class="menu-item"><a href="/" title="anasayfa"><span>Anasayfa</span></a></li>
+              <li class="menu-item"><a href="#services" title="Hizmetler"><span>Hizmetler</span></a></li>
+              <li class="menu-item"><a href="#features" title="Özellikler"><span>Özellikler</span></a></li>
+              <li class="menu-item"><a href="#about" title="Hakkımızda"><span>Hakkımızda</span></a></li>
+            </ul>
+          </nav>
+
+          <div class="btn-part d-flex align-items-center gap-2">
+            <a href="#contact" class="btn">İletişim</a>
+            <button class="mr-menu_toggle btn btn-sm" style="background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--muted);">Menu</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </header>
 
+  <!-- Mobile sliding menu -->
+  <div class="mr-menu d-lg-none" style="display:none;position:fixed;left:0;top:0;bottom:0;width:280px;background:#0b0b0b;z-index:1200;padding:28px;">
+    <button class="mr-menu_close" style="background:transparent;border:none;color:#fff;font-size:22px;position:absolute;right:12px;top:12px;">✕</button>
+    <div class="mobile-logo mb-3"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/logo.png" style="height:40px"></div>
+    <ul style="list-style:none;padding:0;margin-top:18px;">
+      <li style="margin-bottom:12px"><a href="/" style="color:#fff">Anasayfa</a></li>
+      <li style="margin-bottom:12px"><a href="#services" style="color:#fff">Hizmetler</a></li>
+      <li style="margin-bottom:12px"><a href="#features" style="color:#fff">Özellikler</a></li>
+      <li style="margin-bottom:12px"><a href="#about" style="color:#fff">Hakkımızda</a></li>
+    </ul>
+  </div>
 
-    <main class="wrapper">    <section class="wptb-slider style-ai" style="background-image: url('https://betseo.net/theme/default/assets/img/bgs.jpg')">
-        <div class="container">
-            <div class="wptb-slider--wrapper">
-                <div class="wptb-slider--item">
-                    <div class="row align-items-center">
-                        <div class="col-xxl-6 col-md-7 offset-xxl-6 offset-md-5">
-                            <div class="wptb-slider--content">
-                                <h6>BetSEO</h6>
-                                <h1><span class="highlight">Bahis sektörüne özel</span> pazarlama çözümleri
-                                </h1>
-                                <p>Markanızı yükseltmek için hazır olun — uzman pazarlama çözümlerimizle büyüyün.</p>
+  <!-- HERO -->
+  <main class="wrapper">
+    <section class="wptb-slider" style="background-image:url('https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/bgs.jpg')">
+      <div class="container">
+        <div class="wptb-slider--wrapper">
+          <div class="wptb-slider--item">
+            <div class="row align-items-center">
+              <div class="col-lg-6 offset-lg-6">
+                <div class="wptb-slider--content" data-aos="fade-left" data-aos-duration="800">
+                  <h6>BetSEO</h6>
+                  <h1><span class="highlight">Bahis sektörüne özel</span> pazarlama çözümleri</h1>
+                  <p>Markanızı yükseltmek için hazır olun — uzman pazarlama çözümlerimizle büyüyün.</p>
 
-                                <div class="btns d-flex align-items-center gap-4">
-                                    <a href="https://cutt.ly/8eJhxaLo" target="_blank" class="btn"><span
-                                                class="btn-arrow-hover"><i class="bi bi-skype"></i><i
-                                                    class="bi bi-skype"></i></span> Skype ile Mesaj Gönder</a>
-                                    <a href="https://cutt.ly/ceJbR0HY" target="_blank" class="btn bg-white">Telegram ile Mesaj Gönder <span
-                                                class="btn-arrow-hover"><i class="bi bi-telegram"></i><i
-                                                    class="bi bi-telegram"></i></span></a>
-                                </div>
+                  <div class="btns d-flex align-items-center gap-3 mt-4">
+                    <a href="https://cutt.ly/8eJhxaLo" target="_blank" class="btn"><span>Skype ile Mesaj Gönder</span></a>
+                    <a href="https://cutt.ly/ceJbR0HY" target="_blank" class="btn bg-white"><span>Telegram ile Mesaj Gönder</span></a>
+                  </div>
 
-                                <p>Bize hemen bir mesaj gönderin.</p>
-                            </div>
-                        </div>
-                    </div>
+                  <p class="mt-3" style="color:var(--muted)">Bize hemen bir mesaj gönderin.</p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div> <!-- /.container -->
     </section>
 
-    <section id="about" class="wptb-ai-workprocess pb-0">
-        <div class="wptb-ai-section-particle" style="top: -225px !important;">
-            <img src="https://betseo.net/theme/default/assets/img/ai/ellipse-120.png" alt="">
-        </div>
-        <div class="container">
-            <div class="wptb-heading style-ai">
-                <div class="wptb-heading--inner text-center">
-                    <div class="wptb-heading--subtitle wow fadeInUp">Profesyonel Çalışmalar</div>
-                    <h2 class="wptb-heading--title lg wow fadeInUp">Lider Pazarlama Uzmanlığıyla<br> Zirveye Ulaşın</h2>
-                    <p class="text-start">Bahis sektörü için özel olarak hazırlanmış, güvenilir SEO ve dijital pazarlama hizmetleri sunuyoruz. Rekabetin ve düzenlemelerin yoğun olduğu bu sektörde, doğru hedef kitleye ulaşmak, güven inşa etmek ve sürdürülebilir büyüme sağlamak için güçlü bir çevrimiçi varlık şarttır. BetSEO olarak sektöre dair derin bilgi birikimimizle markanızı öne çıkarıyoruz.</p>
+    <!-- ABOUT -->
+    <section id="about" class="wptb-ai-workprocess pb-0" style="padding:48px 0 20px;">
+      <div style="position:relative;">
+        <img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/ai/ellipse-120.png" alt="" style="position:absolute;right:8%;top:-90px;opacity:.9;transform:translateZ(0);width:260px;">
+      </div>
 
-                    <p class="text-start">Kurumsal SEO hizmetlerimiz; anahtar kelime otoritenizi artırmayı, arama sonuçlarında görünürlüğünüzü kalıcı hale getirmeyi hedefler. Bahis sektöründeki en etkili arama terimlerini analiz ederek kapsamlı stratejiler geliştiriyoruz. Böylece potansiyel müşterileriniz sizi kolaylıkla bulur ve marka bilinirliğiniz yükselir.</p>
+      <div class="container">
+        <div class="wptb-heading style-ai">
+          <div class="wptb-heading--inner text-center">
+            <div class="wptb-heading--subtitle" data-aos="fade-up">Profesyonel Çalışmalar</div>
+            <h2 class="wptb-heading--title lg" data-aos="fade-up" data-aos-delay="100">Lider Pazarlama Uzmanlığıyla<br> Zirveye Ulaşın</h2>
+            <div class="text-start" style="max-width:920px;margin:18px auto;color:var(--muted)">
+              <p>Bahis sektörü için özel olarak hazırlanmış, güvenilir SEO ve dijital pazarlama hizmetleri sunuyoruz. Rekabetin ve düzenlemelerin yoğun olduğu bu sektörde, doğru hedef kitleye ulaşmak, güven inşa etmek ve sürdürülebilir büyüme sağlamak için güçlü bir çevrimiçi varlık şarttır. BetSEO olarak sektöre dair derin bilgi birikimimizle markanızı öne çıkarıyoruz.</p>
 
-                    <p class="text-start">Affiliate (ortaklık) SEO stratejilerimiz, rakip analizi ve hedef odaklı çalışmayla trafik çekmeyi amaçlar. Rakip sitelerden değerli trafik kazanarak pazar payınızı genişletiyoruz. Bu sayede marka bilinirliğiniz artar ve kullanıcılar platformunuza daha kolay yönlendirilir.</p>
+              <p>Kurumsal SEO hizmetlerimiz; anahtar kelime otoritenizi artırmayı, arama sonuçlarında görünürlüğünüzü kalıcı hale getirmeyi hedefler. Bahis sektöründeki en etkili arama terimlerini analiz ederek kapsamlı stratejiler geliştiriyoruz. Böylece potansiyel müşterileriniz sizi kolaylıkla bulur ve marka bilinirliğiniz yükselir.</p>
 
-                    <p class="text-start">Sosyal medya pazarlamasında, markanız için özgün ve etkileşim odaklı içerikler üretiyoruz. Kampanya yönetimi, içerik planlaması ve topluluk yönetimi ile takipçi sayınızı ve etkileşiminizi artırıyoruz. Hedef kitlenizin bulunduğu platformlarda doğru mesajı vermeniz için yanınızdayız.</p>
-
-                    <p class="text-start">E-posta pazarlaması hala en etkili kanallardan biridir. Spam korumalı, yüksek teslimat oranlı e-posta sistemimizle (yüzde 99’a yakın teslimat) kampanyalar yürütüyoruz. Etkileyici e-postalarla özel tekliflerinizi duyurmanız, kullanıcıları yeniden kazanmanız ve dönüşümleri artırmanız mümkün.</p>
-
-                    <p class="text-start">Güçlü backlink stratejileri ile domain otoritenizi yükseltiyoruz. Sektöre özel, kaliteli kaynaklardan alınan bağlantılar sayesinde arama motorlarındaki konumunuz iyileşir. Doğru ve anlamlı backlink’lerle organik büyüme sağlıyoruz.</p>
-
-                    <p class="text-start">Kalıcı SEO temeli kurmak isteyenler için Private Blog Network (PBN) hizmetimiz mevcut. Yüksek otoriteli ön bloglar üzerinden güvenli ve sürdürülebilir backlink yapıları oluşturuyoruz. Uygun ve dikkatli uygulamalarla uzun vadeli SEO avantajı sağlıyoruz.</p>
-
-                    <p class="text-start">Marka itibarını korumak da önemli. Hesap kapatma (Account Banning) hizmetimizle spam ya da sahte hesapları hedefleyerek sosyal platformlarda sağlıklı bir etkileşim ortamı oluşturuyoruz. Böylece marka güvenilirliğiniz korunur.</p>
-
-                    <p class="text-start">Otomasyon tercih eden müşterilerimiz için yapay zekâ destekli Otomatik SEO Paneli sunuyoruz. Rutin SEO görevlerinin otomasyonu, gerçek zamanlı analiz ve yönetim araçlarıyla zaman kazanmanızı sağlıyoruz. SEO stratejiniz her an etkin ve izlenebilir olur.</p>
-
-                    <p class="text-start">BetSEO olarak sektörel uzmanlık, yenilikçi teknoloji ve stratejik yaklaşımlarımızla markanızı dijitalde yükseltiyoruz. Amacımız sadece daha iyi sıralamalar elde etmek değil; hedef kitlenizle gerçek ve kalıcı bağlantılar kurmanızı sağlamaktır. Bizimle çalışın, dijitalde öne çıkın.</p>
-
-                </div>
+              <p>Affiliate (ortaklık) SEO stratejilerimiz, rakip analizi ve hedef odaklı çalışmayla trafik çekmeyi amaçlar. Rakip sitelerden değerli trafik kazanarak pazar payınızı genişletiyoruz. Bu sayede marka bilinirliğiniz artar ve kullanıcılar platformunuza daha kolay yönlendirilir.</p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="features" class="wptb-ai-tabs pb-0">
-        <div class="container">
-            <div class="wptb-ai-tab-content" style="background-image: url('https://betseo.net/theme/default/assets/img/11.jpg');">
-                <div class="wptb-ai-tab--inner d-flex align-items-start">
-                    <ul class="nav nav-vertical" id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" role="tab">Sektörel Uzmanlık</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tab-2" data-bs-toggle="tab" role="tab">Premium Hizmet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tab-3" data-bs-toggle="tab" role="tab">Global Çalışma</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#tab-4" data-bs-toggle="tab" role="tab">Özel Çözümler</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
-                            <div class="wptb-apps-item">
-                                <div class="wptb-item--inner">
-                                    <div class="wptb-item-meta">
-                                        <h3 class="wptb-item--title">Bahis Sektörüne Özel <span>01</span></h3>
-                                        <div class="wptb-item--description">Uzman ekibimiz sektöre dair ihtiyaçları bilir ve buna göre çözümler sunar. Bahis sektörüne özgü çözümlerimizden faydalanın.</div>
-                                    </div>
-
-                                    <div class="btns d-flex align-items-center gap-4">
-                                        <a href="#" class="btn">Başlayın <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-2" role="tabpanel">
-                            <div class="wptb-apps-item">
-                                <div class="wptb-item--inner">
-                                    <div class="wptb-item-meta">
-                                        <h3 class="wptb-item--title">Premium Hizmet Yapısı<span>02</span></h3>
-                                        <div class="wptb-item--description">Özel çözümler sunuyoruz; herkesle çalışmıyor, iş ortaklarımızı titizlikle seçiyoruz.</div>
-                                    </div>
-
-                                    <div class="btns d-flex align-items-center gap-4">
-                                        <a href="#" class="btn">Başlayın <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-3" role="tabpanel">
-                            <div class="wptb-apps-item">
-                                <div class="wptb-item--inner">
-                                    <div class="wptb-item-meta">
-                                        <h3 class="wptb-item--title">Global Çalışma Yapısı<span>03</span></h3>
-                                        <div class="wptb-item--description">Birden çok ülke ve dilde profesyonel hizmet veriyoruz; markanızı dünya çapında veya seçtiğiniz ülkelerde tanıtıyoruz.</div>
-                                    </div>
-
-                                    <div class="btns d-flex align-items-center gap-4">
-                                        <a href="#" class="btn">Başlayın <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-4" role="tabpanel">
-                            <div class="wptb-apps-item">
-                                <div class="wptb-item--inner">
-                                    <div class="wptb-item-meta">
-                                        <h3 class="wptb-item--title">İhtiyacınıza Özel Çözümler <span>04</span></h3>
-                                        <div class="wptb-item--description">İhtiyaçlarınızı belirleyip size özel çözümlerle başarıya ulaşmanızı sağlıyoruz.</div>
-                                    </div>
-
-                                    <div class="btns d-flex align-items-center gap-4">
-                                        <a href="#" class="btn">Başlayın <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- FEATURES (tabs) -->
+    <section id="features" class="wptb-ai-tabs pb-0" style="padding:28px 0;">
+      <div class="container">
+        <div class="wptb-ai-tab-content" style="background-image: url('https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/11.jpg');">
+          <div class="row">
+            <div class="col-lg-4">
+              <ul class="nav nav-vertical" id="pills-tab" role="tablist" data-aos="fade-right">
+                <li class="nav-item"><a class="nav-link active" href="#tab-1" data-bs-toggle="tab">Sektörel Uzmanlık</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab-2" data-bs-toggle="tab">Premium Hizmet</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab-3" data-bs-toggle="tab">Global Çalışma</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab-4" data-bs-toggle="tab">Özel Çözümler</a></li>
+              </ul>
             </div>
+
+            <div class="col-lg-8">
+              <div class="tab-content" data-aos="fade-left">
+                <div class="tab-pane fade show active" id="tab-1">
+                  <div class="wptb-apps-item">
+                    <div class="wptb-item--inner">
+                      <div class="wptb-item-meta">
+                        <h3 class="wptb-item--title">Bahis Sektörüne Özel <span>01</span></h3>
+                        <div class="wptb-item--description">Uzman ekibimiz sektöre dair ihtiyaçları bilir ve buna göre çözümler sunar. Bahis sektörüne özgü çözümlerimizden faydalanın.</div>
+                      </div>
+                      <div class="btns mt-3">
+                        <a href="#" class="btn">Başlayın</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- other tabs content (kept simpler but same text) -->
+                <div class="tab-pane fade" id="tab-2">
+                  <h4>Premium Hizmet Yapısı</h4>
+                  <p>Özel çözümler sunuyoruz; herkesle çalışmıyor, iş ortaklarımızı titizlikle seçiyoruz.</p>
+                </div>
+                <div class="tab-pane fade" id="tab-3">
+                  <h4>Global Çalışma Yapısı</h4>
+                  <p>Birden çok ülke ve dilde profesyonel hizmet veriyoruz.</p>
+                </div>
+                <div class="tab-pane fade" id="tab-4">
+                  <h4>İhtiyacınıza Özel Çözümler</h4>
+                  <p>İhtiyaçlarınızı belirleyip size özel çözümlerle başarıya ulaşmanızı sağlıyoruz.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <!-- SERVICES -->
+    <section id="services" class="wptb-ai-features" style="padding:36px 0;">
+      <div class="container">
+        <div class="wptb-heading style-ai text-center" data-aos="fade-up">
+          <div class="wptb-heading--subtitle">Hizmetler</div>
+          <h2 class="wptb-heading--title">Hizmetlerimize Göz Atın</h2>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta5.svg" alt=""></div>
+              <div class="wptb-item--holder">
+                <h4>Kurumsal SEO</h4>
+                <div class="wptb-item--desc">Kurumsal anahtar kelimeleriniz için otorite sağlıyor ve bunu düzenli olarak koruyoruz.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta7.svg" alt=""></div>
+              <div class="wptb-item--holder">
+                <h4>Affiliate SEO</h4>
+                <div class="wptb-item--desc">Rakiplerinizi analiz ediyor ve rakip sitelerden trafik çekmenizi sağlıyoruz.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="130">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta2.svg" alt=""></div>
+              <div class="wptb-item--holder">
+                <h4>Sosyal Medya Pazarlaması</h4>
+                <div class="wptb-item--desc">Sosyal medya pazarlamanızı yönetiyor ve size hedefli trafik sağlıyoruz.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="170">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta3.svg" alt=""></div>
+              <div class="wptb-item--holder">
+                <h4>E-posta Pazarlama</h4>
+                <div class="wptb-item--desc">Spam korumalı, yüksek teslimat oranlı toplu e-posta sistemleri sağlıyoruz.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- second row of service icons -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="210">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta8.svg" alt=""></div>
+              <h4>Bet Backlink</h4>
+              <div class="wptb-item--desc">Bahis sektörüne uygun, özel hazırlanmış backlink kaynakları sunuyoruz.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta10-2.svg" alt=""></div>
+              <h4>PBN Network</h4>
+              <div class="wptb-item--desc">Kendi kalıcı backlink yapınızı kurmanız için yüksek otoriteli bloglar sağlıyoruz.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="290">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta12-2.svg" alt=""></div>
+              <h4>Hesap Kapatma</h4>
+              <div class="wptb-item--desc">Twitter (X), Google Grupları, Tumblr vb. platformlarda spam hesapların kapatılmasını sağlıyoruz.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="330">
+            <div class="wptb-fancy-box1">
+              <div class="wptb-fancy-icon"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/services/meta1.svg" alt=""></div>
+              <h4>Otomatik SEO Paneli</h4>
+              <div class="wptb-item--desc">Talep üzerine yapay zekâ destekli otomatik SEO paneli sağlayabiliyoruz.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- counters -->
+      <div class="wptb-counter2 style-ai pd-top-100" style="padding-top:48px;">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+              <div class="wptb-counter--value"><span class="odometer" data-count="10">10</span><span class="suffix">B</span></div>
+              <div class="wptb-counter--text">Bahis</div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+              <div class="wptb-counter--value"><span class="odometer" data-count="56">56</span><span class="suffix">S</span></div>
+              <div class="wptb-counter--text">Arama</div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+              <div class="wptb-counter--value"><span class="odometer" data-count="20">20</span><span class="suffix">E</span></div>
+              <div class="wptb-counter--text">Motoru</div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+              <div class="wptb-counter--value"><span class="odometer" data-count="100">100</span><span class="suffix">O</span></div>
+              <div class="wptb-counter--text">Optimizasyon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <section id="services" class="wptb-ai-features">
-        <div class="container">
-            <div class="wptb-heading style-ai">
-                <div class="wptb-heading--inner text-center">
-                    <div class="wptb-heading--subtitle wow fadeInUp">Hizmetler</div>
-                    <h2 class="wptb-heading--title wow fadeInUp">Hizmetlerimize Göz Atın</h2>
-                </div>
+    <!-- CONTACT -->
+    <section id="contact" class="wptb-ai-faq" style="background-image:url('https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/3.jpg');">
+      <div class="background-overlay"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>Bize Ulaşın</h2>
+            <p>Uzman ekibimizle hemen bir görüşme planlayın.</p>
+            <div class="btns d-flex gap-2 mt-3">
+              <a href="https://cutt.ly/8eJhxaLo" target="_blank" class="btn">Skype ile Mesaj Gönder</a>
+              <a href="https://cutt.ly/ceJbR0HY" target="_blank" class="btn bg-white">Telegram ile Mesaj Gönder</a>
             </div>
-            <div class="row">
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta5.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Kurumsal SEO</a></h4>
-                                <div class="wptb-item--desc">Kurumsal anahtar kelimeleriniz için otorite sağlıyor ve bunu düzenli olarak koruyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta7.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Affiliate SEO</a></h4>
-                                <div class="wptb-item--desc">Rakiplerinizi analiz ediyor ve rakip sitelerden trafik çekmenizi sağlıyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta2.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Sosyal Medya Pazarlaması</a></h4>
-                                <div class="wptb-item--desc">Sosyal medya pazarlamanızı yönetiyor ve size hedefli trafik sağlıyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta3.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">E-posta Pazarlama</a></h4>
-                                <div class="wptb-item--desc">Spam korumalı, yüksek teslimat oranlı toplu e-posta sistemleri sağlıyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta8.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Bet Backlink</a></h4>
-                                <div class="wptb-item--desc">Bahis sektörüne uygun, özel hazırlanmış backlink kaynakları sunuyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta10-2.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">PBN Network</a></h4>
-                                <div class="wptb-item--desc">Kendi kalıcı backlink yapınızı kurmanız için yüksek otoriteli bloglar sağlıyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta12-2.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Hesap Kapatma</a></h4>
-                                <div class="wptb-item--desc">Twitter (X), Google Grupları, Tumblr vb. platformlarda spam hesapların kapatılmasını sağlıyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="wptb-fancy-box1 style8 wow fadeInLeft">
-                        <div class="wptb-item--inner">
-                            <div class="wptb-fancy-icon">
-                                <img src="https://betseo.net/theme/default/assets/img/services/meta1.svg" alt="img">
-                            </div>
-                            <div class="wptb-item--holder">
-                                <h4><a class="wptb-item--title" href="#">Otomatik SEO Paneli</a></h4>
-                                <div class="wptb-item--desc">Talep üzerine yapay zekâ destekli otomatik SEO paneli sağlayabiliyoruz.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+            <div class="wptb-img-holder mt-4">
+              <img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/5.png" alt="img" style="max-width:320px;width:100%">
             </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <h2>Hemen Mesaj Gönder</h2>
+            <p>Bize hemen mesaj gönderin; ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+
+            <!-- Formspree form (email) -->
+            <form id="contactForm" action="https://formspree.io/f/mwpraykl" method="POST" class="mt-3">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">Site</label>
+                  <input type="text" name="site" class="form-control bg-transparent" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Telegram / Skype</label>
+                  <input type="text" name="contact" class="form-control bg-transparent" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Mesaj</label>
+                  <textarea name="message" rows="5" class="form-control bg-transparent" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn w-100">Gönder</button>
+                </div>
+              </div>
+            </form>
+
+            <div id="formMsg" style="display:none;margin-top:12px;"></div>
+          </div>
         </div>
-
-        <div class="wptb-counter2 style-ai pd-top-100">
-            <div class="container">
-                <div class="wptb-counter--box">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="wptb-counter--item">
-                                <div class="wptb-counter--value"><span class="odometer" data-count="10"></span><span class="suffix">B</span></div>
-                                <div class="wptb-counter--text">Bahis</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="wptb-counter--item">
-                                <div class="wptb-counter--value"><span class="odometer" data-count="56"></span><span class="suffix">S</span></div>
-                                <div class="wptb-counter--text">Arama</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="wptb-counter--item">
-                                <div class="wptb-counter--value"><span class="odometer" data-count="20"></span><span class="suffix">E</span></div>
-                                <div class="wptb-counter--text">Motoru</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="wptb-counter--item">
-                                <div class="wptb-counter--value"><span class="odometer" data-count="100"></span><span class="suffix">O</span></div>
-                                <div class="wptb-counter--text">Optimizasyon</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section id="contact" class="wptb-ai-faq" style="background-image: url('https://betseo.net/theme/default/assets/img/3.jpg');">
-        <div class="background-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="wptb-heading style-ai">
-                        <div class="wptb-heading--inner">
-                            <h2 class="wptb-heading--title wow fadeInUp">Bize Ulaşın</h2>
-                            <div class="wptb-heading--description wow fadeInUp">Uzman ekibimizle hemen bir görüşme planlayın.</div>
-                        </div>
-                        <div class="btns d-flex align-items-center gap-4 mt-4">
-                            <a href="https://cutt.ly/8eJhxaLo" target="_blank" class="btn"><span
-                                        class="btn-arrow-hover"><i class="bi bi-skype"></i><i
-                                            class="bi bi-skype"></i></span> Skype ile Mesaj Gönder</a>
-                            <a href="https://cutt.ly/ceJbR0HY" target="_blank" class="btn bg-white text-dark">Telegram ile Mesaj Gönder <span
-                                        class="btn-arrow-hover"><i class="bi bi-telegram"></i><i
-                                            class="bi bi-telegram"></i></span></a>
-                        </div>
-                    </div>
-                    <div class="wptb-img-holder">
-                        <img src="https://betseo.net/theme/default/assets/img/5.png" alt="img">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="wptb-heading style-ai">
-                        <div class="wptb-heading--inner">
-                            <h2 class="wptb-heading--title wow fadeInUp">Hemen Mesaj Gönder</h2>
-                            <div class="wptb-heading--description wow fadeInUp">Bize hemen mesaj gönderin; ekibimiz en kısa sürede sizinle iletişime geçecektir.</div>
-                        </div>
-                    </div>
+  </main>
 
-                    <div class="wptb-accordion wptb-accordion4 wow fadeInUp">
-                        <div class="wptb--item active">
-                            <div class="wptb-item--content pt-0">
-                                <form action="web-contact-form">
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-3">
-                                            <div class="form-group">
-                                                <label>Site</label>
-                                                <input type="text" name="site" class="form-control bg-transparent" placeholder="" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-12 mb-3">
-                                            <div class="form-group">
-                                                <label>Telegram / Skype</label>
-                                                <input type="text" name="contact" class="form-control bg-transparent" placeholder="" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-12 mb-3">
-                                            <div class="form-group">
-                                                <label>Mesaj</label>
-                                                <textarea name="message" class="form-control bg-transparent" placeholder="" required=""></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-12">
-                                            <div class="btn-group w-100 text-center">
-                                                <button class="btn gradient-one w-100 text-center" type="submit">Gönder <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="logo-footer mb-3"><a href="/"><img src="https://raw.githubusercontent.com/betseogalaxi/seopro/acf720d33cb384eedbe2d6a7ca97002ea667095e/logo.png" alt="logo"></a></div>
+          <p style="color:var(--muted)">BetSEO, bahis sektörü için özel SEO ve dijital pazarlama çözümleri sunan kreatif bir pazarlama ajansıdır. Markanızı görünür kılmak ve büyütmek için çalışıyoruz.</p>
         </div>
-    </section>
-</main>
-<footer class="footer">
-    <div class="wptb-mask-bg-parallax"></div>
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <div class="logo-footer mb-5">
-                            <a href="https://betseo.pages.dev/"><img src="https://betseo.net/theme/default/assets/img/logo.png" alt="logo"></a>
-                        </div>
-                        <ul>
-                            <li>BetSEO, bahis sektörü için özel SEO ve dijital pazarlama çözümleri sunan kreatif bir pazarlama ajansıdır. Markanızı görünür kılmak ve büyütmek için çalışıyoruz.</li>
-                        </ul>
-                        <div class="footer-social">
-                            <ul class="footer-social-list">
-                                <li>Mesaj Gönder</li>
-                                <li><a href="https://cutt.ly/8eJhxaLo" target="_blank"><i class="bi bi-skype"></i></a></li>
-                                <li><a href="https://cutt.ly/ceJbR0HY" target="_blank"><i class="bi-telegram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="widget-title">Hızlı Linkler</h4>
-                        <div class="footer-nav">
-                            <ul class="footer_menu">
-                                <li class="menu-item"><a href="https://betseo.pages.dev/" title="anasayfa"><span>Anasayfa</span></a></li>
-                                <li class="menu-item"><a href="#services" title="Hizmetler"><span>Hizmetler</span></a></li>
-                                <li class="menu-item"><a href="#features" title="Özellikler"><span>Özellikler</span></a></li>
-                                <li class="menu-item"><a href="#about" title="Hakkımızda"><span>Hakkımızda</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="widget-title lg">Bültenimize Abone Olun</h4>
-                        <p class="widget-text mb-4">Dijital pazarlamadaki en son trendlerden haberdar olmak ve özel ipuçları almak için bültenimize abone olun.</p>
-                        <form class="newsletter-form" method="post">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control bg-transparent" placeholder="E-posta adresinizi girin" required="">
-                            </div>
-                            <button class="btn gradient-one text-center" type="submit">Abone Ol <span class="btn-arrow-hover"><i class="bi bi-arrow-up-right"></i><i class="bi bi-arrow-up-right"></i></span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-3">
+          <h5>Hızlı Linkler</h5>
+          <ul style="list-style:none;padding:0;color:var(--muted);">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="#services">Hizmetler</a></li>
+            <li><a href="#features">Özellikler</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+          </ul>
         </div>
+
+        <div class="col-lg-5">
+          <h5>Bültenimize Abone Olun</h5>
+          <p style="color:var(--muted)">Dijital pazarlamadaki en son trendlerden haberdar olmak ve özel ipuçları almak için bültenimize abone olun.</p>
+
+          <form id="newsletter" action="https://formspree.io/f/mwpraykl" method="POST" class="d-flex">
+            <input type="email" name="email" class="form-control bg-transparent" placeholder="E-posta adresinizi girin" required>
+            <button class="btn" type="submit" style="margin-left:12px">Abone Ol</button>
+          </form>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;border-top:1px solid rgba(255,255,255,.03);padding-top:16px;color:var(--muted);font-size:14px">
+        <div class="d-flex justify-content-between">
+          <div>Copyright &copy; 2025 BetSEO. Tüm hakları saklıdır.</div>
+          <div>Made with ♥</div>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-inner">
-                <div class="copyright">
-                    <p>Copyright &copy; 2025 <a href="https://betseo.pages.dev/">BetSEO</a>. Tüm hakları saklıdır.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+  </footer>
 
-<div class="totop">
-    <a href="#"><i class="bi bi-chevron-up"></i></a>
-</div>
-<script src="https://betseo.net/theme/default/assets/js/jquery-3.6.0.min.js"></script>
-<script src="https://betseo.net/theme/default/assets/js/bootstrap.min.js"></script>
-<script src="https://betseo.net/theme/default/assets/js/theme.js"></script>
-<script src="https://betseo.net/system-static/assets/js/request.js"></script>
-<script src="https://betseo.net/system-static/plugin/sweetalert/sweetalert2@10.js"></script>
-<script>const api_url = 'https://betseo.net/api'</script><script src="https://betseo.net/system-static/plugin/swiper/js/swiper-bundle.min.js"></script><style>
-.glink {
-display: block !important;
-    padding: 6px 0 !important;
-    border-bottom: 1px solid #e7e7e7 !important;
-    white-space: nowrap !important;
-    line-height: 0 !important;
-    flex-basis: 37px !important;
-    box-sizing: border-box !important;
-        text-align: left !important;
-}
+  <div class="totop"><a href="#top">↑</a></div>
+
+  <!-- SCRIPTS: jQuery, Bootstrap, Swiper, AOS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+
+  <!-- Odometer-like simple counter (very small) -->
+  <script>
+    // Initialize AOS
+    AOS.init({ once: true, duration: 700 });
+
+    // Sticky header on scroll
+    (function(){
+      var header = document.querySelector('.header');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 20) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+      });
+    })();
+
+    // Mobile menu toggle
+    (function(){
+      var openBtn = document.querySelector('.mr-menu_toggle');
+      var menu = document.querySelector('.mr-menu');
+      var closeBtn = document.querySelector('.mr-menu_close');
+      if(openBtn && menu && closeBtn){
+        openBtn.addEventListener('click', function(){ menu.style.display = 'block'; });
+        closeBtn.addEventListener('click', function(){ menu.style.display = 'none'; });
+      }
+    })();
+
+    // Simple odometer counter animation
+    (function(){
+      function runCounters(){
+        var els = document.querySelectorAll('.odometer');
+        els.forEach(function(el){
+          var target = parseInt(el.getAttribute('data-count')||el.textContent||0,10);
+          var start = 0;
+          var dur = 1200;
+          var startT = null;
+          function step(ts){
+            if(!startT) startT = ts;
+            var prog = Math.min((ts-startT)/dur,1);
+            el.textContent = Math.floor(prog*target);
+            if(prog<1) requestAnimationFrame(step);
+            else el.textContent = target;
+          }
+          requestAnimationFrame(step);
+        });
+      }
+      window.addEventListener('load', runCounters);
+      window.addEventListener('scroll', function(){ if(window.scrollY>200) runCounters(); });
+    })();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          var target = document.querySelector(href);
+          if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+
+    // Contact form submission using Formspree (AJAX) for nicer UX
+    (function(){
+      var form = document.getElementById('contactForm');
+      var msg = document.getElementById('formMsg');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var data = new FormData(form);
+          fetch(form.action, {method:'POST', body: data, headers:{'Accept':'application/json'}})
+            .then(function(res){
+              if(res.ok) return res.json();
+              return res.json().then(function(err){throw err});
+            })
+            .then(function(json){
+              msg.style.display='block'; msg.style.color='lightgreen'; msg.textContent='Mesajınız alındı. Teşekkürler!';
+              form.reset();
+            })
+            .catch(function(err){
+              msg.style.display='block'; msg.style.color='#ffb4a2'; msg.textContent='Gönderilirken hata oluştu. Lütfen tekrar deneyin.';
+            });
+        });
+      }
+    })();
+
+    // Init a small testimonial/swiper if you add slides later
+    var testimonialSwiper = new Swiper('.testimonial-swiper', {
+      loop:true,
+      slidesPerView:1,
+      autoplay:{delay:3500, disableOnInteraction:false},
+      pagination:{el:'.swiper-pagination', clickable:true}
+    });
+  </script>
+
 </body>
 </html>
